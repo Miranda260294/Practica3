@@ -1,0 +1,53 @@
+using System;
+using System.Collections;
+
+namespace Datos
+	
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			Hashtable tabla=new Hashtable();
+			
+			for(int n=1;n<=2;n++){
+			
+			Persona p=new Persona();
+			
+			Console.WriteLine("Codigo");
+			p.Codigo=int.Parse(Console.ReadLine());
+			
+			Console.WriteLine("Escriba el Nombre");
+			p.Nombre=Console.ReadLine();
+			
+			Console.WriteLine("Escriba el Telefono");
+			p.Telefono=Console.ReadLine();
+			
+			Console.WriteLine("Escriba el Facebook");
+			p.Facebook=Console.ReadLine();
+			
+			
+			tabla.Add(p.Codigo,p);
+			}
+			
+			Console.WriteLine("Codigo");
+			int Codigo=int.Parse(Console.ReadLine());
+			
+			Persona editar=(Persona)(tabla[Codigo]);
+			
+			Console.WriteLine("Edite lo que va a cambiar");
+			Console.WriteLine("Edite el Nombre que va a cambiar");
+			editar.Nombre=Console.ReadLine();
+			
+			Console.WriteLine("Edite el Telefono que va a cambiar");
+			editar.Telefono=Console.ReadLine();
+			
+			Console.WriteLine("Edite el Facebook que va a cambiar");
+			editar.Facebook=Console.ReadLine();
+			
+			
+			Console.Write("Press any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
